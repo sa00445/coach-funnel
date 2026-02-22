@@ -23,22 +23,20 @@ const problems = [
 
 export default function Problem() {
   return (
-    <section className="py-20 px-6 bg-gray-50">
+    <section className="py-20 px-6" style={{backgroundColor: '#111111'}}>
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Sound familiar?
-          </h2>
-          <p className="text-lg text-gray-600 max-w-xl mx-auto">
+          <h2 className="text-4xl font-bold mb-4" style={{color: '#F5F0E8'}}>Sound familiar?</h2>
+          <p className="text-lg max-w-xl mx-auto" style={{color: '#9A8A6A'}}>
             Most coaches are leaving significant money on the table — not because they lack value, but because they lack the right system.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
           {problems.map((p, i) => (
-            <div key={i} className="bg-white rounded-2xl p-8 border border-gray-100 hover:border-gray-200 transition-colors">
+            <div key={i} className="rounded-2xl p-8 border transition-all hover:border-opacity-60" style={{backgroundColor: '#1a1a1a', borderColor: '#2a2a2a'}}>
               <div className="text-3xl mb-4">{p.icon}</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{p.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{p.desc}</p>
+              <h3 className="text-lg font-semibold mb-2" style={{color: '#F5F0E8'}}>{p.title}</h3>
+              <p className="leading-relaxed" style={{color: '#9A8A6A'}}>{p.desc}</p>
             </div>
           ))}
         </div>
